@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Обо мне</title>
+{% endblock %}
+
+{% block main %}
+<p class="header" id="back5">Я и моя образовательная программа</p>
+<container class="flex align-items-stretch px-3">
+
+    <!-- Информация о программе -->
+    <div class="row">
+        <div class="col d-flex align-items-stretch">
+            <div class="card">
+                <h5 class="card text-center">Моя образовательная программа</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Название программы:</b> {{ program_info.name }}</li>
+                    <li class="list-group-item"><b>Описание:</b> {{ program_info.description }}
+                        <ul style="list-style:circle;">
+                            {% for l in program_info.list %}
+                            <li>{{l}}</li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="card">
+                <h5 class="card text-center">Руководитель программы</h5>
+                <img class="rounded-circle mx-auto mt-3" src="{{ program_info.supervisor.image }}" alt="{{ program_info.supervisor.full_name }}">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ФИО:</b> {{ program_info.supervisor.full_name }}</li>
+                        <li class="list-group-item"><b>Email:</b> <a href="mailto:{{ program_info.supervisor.email }}">{{ program_info.supervisor.email }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col d-flex align-items-stretch">
+            <div class="card">
+                <h5 class="card text-center">Менеджер программы</h5>
+                <img class="rounded-circle mx-auto mt-3" src="{{ program_info.manager.image }}" class="rounded-circle" alt="{{ program_info.manager.full_name }}">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ФИО:</b> {{ program_info.manager.full_name }}</li>
+                        <li class="list-group-item"><b>Email:</b> <a href="mailto:{{ program_info.supervisor.email }}">{{ program_info.manager.email }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!-- Моя информация -->
+        <div class="col d-flex align-items-stretch">
+            <div class="card">
+                <h5 class="card text-center">Информация обо мне</h5>
+                <img class="rounded-circle mx-auto mt-3" src="{% static my_info.image %}" alt="{{ my_info.full_name }}">
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><b>ФИО:</b> {{ my_info.full_name }}</li>
+                        <li class="list-group-item"><b>Email:</b> <a href="mailto:{{ my_info.email }}">{{ my_info.email }}</a></li>
+                        <li class="list-group-item"><b>Телефон:</b> {{ my_info.phone }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Сокурсники -->
+        <div class="col d-flex align-items-stretch">
+            <div class="card bg-light">
+                <h5 class="card text-center">Сокурсники</h5>
+                <div class="card-body">
+                    <div class="row">
+                        {% for classmate in classmates %}
+                            <div class="col d-flex align-items-stretch">   
+                                <div class="card d-flex align-items-stretch" style="flex: 1;">
+                                    <img class="rounded-circle mx-auto mt-3" src="{{ classmate.image }}" alt="{{ classmate.full_name }}">
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><b>ФИО:</b> {{ classmate.full_name }}</li>
+                                            <li class="list-group-item"><b>Email:</b> <a href="mailto:{{ classmate.email }}">{{ classmate.email }}</a></li>
+                                            <li class="list-group-item"><b>Телефон:</b> {{ classmate.phone }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</container>
+{% include 'footer.html' with back_link="#back5" left_link='animeApp1:Store' right_link='animeApp1:Task_01' %}
+{% endblock %}

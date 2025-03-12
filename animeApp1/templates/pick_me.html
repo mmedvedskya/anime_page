@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Мерч</title>
+{% endblock %}
+
+{% block main %}
+<div class="container">
+    <div class="card-body">
+        <div class="header" id="back4">Мерч Studio Ghibli</div>
+        <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+            <input name="q" type="hidden" value="search">
+            <ul class="d-flex flex-row justify-content-around flex-wrap bg-light" id="node_for_insert">
+                {% for product in products %}
+                <li style="width: 210px" class="d-flex flex-column m-1 p-1 border bg-body">
+                    <img style="width: 180px;" class="align-self-center" src="{{ product.img }}" alt="{{ product.title }}">
+                    <h5 class="card-title" style="text-align: center; margin: 1em;">{{ product.title }}</h5>
+                    <p class="card-text">{{ product.description }}.<br> <b>Цена {{ product.price }} руб.</b></p>
+                    <input type="hidden" name="vendor_code" value="{{ product.vendor_code }}">
+                    <p class="card-text">Заказать <input class="w-25" type="number" name="amount" value="0"></p>
+                </li>
+                {% endfor %}
+            </ul>
+            <input class="btn btn-primary" type="Submit" value="Отправить в корзину">
+        </form>
+    </div>
+</div>
+
+<div>
+    {% include 'footer.html' with back_link="#back4" left_link='animeApp1:Top5' right_link='animeApp1:Edu' %}
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title> Задача </title>
+{% endblock %}
+
+{% block main %}
+<div class="header" id="back6">Задача 11</div>
+<div class="card" style="width: 75%;">
+  <img src="https://evshadrina.github.io/WebApplications_2025/task11.jpg" class="card-img-top" alt="Data for Task 11" title="Условие задачи">
+  <div class="card-body">
+    <div class="card-text">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Формат ввода:</b> 
+          <ul style="list-style:circle;">
+            <li>?food=молоко творог&cals=130-120-110 160-170-189</li>
+            <li>молоко творог/130-120-110 160-170-189/</li>
+          </ul>
+        <li class="list-group-item">
+          {% if error_message %}
+            <p> {{error_message}} </p>
+          {% else %}
+            <ul class="list-unstyled">
+              <li> Названия продуктов: {{food}}</li>
+              <li> Количество белков-жиров-углеводов: {{cals}}</li>
+              <li> Самый низкокалорийный товар: <b>{{result}}</b></li>
+            </ul>
+        </li>
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div>
+  {% include 'footer.html' with back_link="#back6" left_link='animeApp1:Edu' right_link='animeApp1:Welcome' %}
+</div>
+
+{% endblock %}

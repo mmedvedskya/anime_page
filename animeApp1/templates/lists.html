@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Все фильмы</title>
+{% endblock %}
+
+{% block main %}
+<p class="header" id="back2">Полнометражные фильмы Studio Ghibli</p>
+<p class="sub_header">Режиссеры и их фильмы по дате премьеры</p>
+
+<container class="flex">
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Хироюки Морита</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Возвращение кота» (19 июля 2002)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Хиромаса Ёнэбаяси</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Ариэтти из страны лилипутов» (17 июля 2010)</li>
+                        <li>«Воспоминания Марни» (19 июля 2014)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Хаяо Миядзаки</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Навсикая из Долины ветров» (11 марта 1984)</li>
+                        <li>«Небесный замок Лапута» (11 марта 1984)</li>
+                        <li>«Мой сосед Тоторо» (16 апреля 1988)</li>
+                        <li>«Ведьмина служба доставки» (29 июля 1989)</li>
+                        <li>«Порко Россо» (18 июля 1992)</li>
+                        <li>«Принцесса Мононоке» (12 июля 1997)</li>
+                        <li>«Унесённые призраками» (27 июля 2001)</li>
+                        <li>«Ходячий замок» (20 ноября 2004)</li>
+                        <li>«Рыбка Поньо на утёсе» (19 июля 2008)</li>
+                        <li>«Ветер крепчает» (20 июля 2013)</li>
+                        <li>«Мальчик и птица» (14 июля 2023)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Томоми Мотидзуки</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Здесь слышен океан» (3 мая 1993)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Михаэль Дюдок де Вит</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Красная черепаха» (18 мая 2016)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Исао Такахата</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Могила светлячков» (16 апреля 1988)</li>
+                        <li>«Ещё вчера» (20 июля 1991)</li>
+                        <li>«Помпоко: Война тануки» (16 июля 1994)</li>
+                        <li>«Мои соседи Ямада» (17 июля 1999)</li>
+                        <li>«Сказание о принцессе Кагуя» (23 ноября 2013)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Ёсифуми Кондо</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Шёпот сердца» (15 июля 1995)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-light mb-3">
+        <div class="card-header">Горо Миядзаки</div>
+        <div class="card">
+            <div class="card-body">
+                <div class="card-text">
+                    <ol>
+                        <li>«Сказания Земноморья» (29 июля 2006)</li>
+                        <li>«Со склонов Кокурико» (16 июля 2011)</li>
+                        <li>«Ая и ведьма» (30 декабря 2020)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</container>
+<div>
+    {% include 'footer.html' with back_link="#back2" left_link='animeApp1:Welcome' right_link='animeApp1:Top5' %}
+</div>
+
+{% endblock %}

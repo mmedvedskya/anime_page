@@ -1,0 +1,206 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Studio Ghibli</title>
+{% endblock %}
+
+{% block main %}
+<section class="sec1">
+    <div class="header" id="back1">Путеводитель по Studio Ghibli</div>
+    <div class="card" style="width: 30vw;">
+        <img src="{% static 'pictures/pic1.png' %}" class="card-img-top" alt="Characters from the movie" title="Spirited Away">
+        <div class="card-body">
+            <div class="card-text" style="font-size: 1.5vw;"><b>Studio Ghibli</b> — японская анимационная студия. Её основал в 1985 году режиссёр
+                и сценарист Хаяо Миядзаки вместе со своим коллегой и другом Исао Такахатой.
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+<br><br>
+
+<!--АНКЕТА-->
+
+<section class="sec2">
+    <div class="header" id="quiz">Анкета о фильмах Studio Ghibli</div>
+
+    <form id="form" action="https://www.bing.com/" target="_blank" method="get" name="quiz">
+        <button type="reset" class="btn btn-secondary">Очистить</button>
+
+        <fieldset>
+            <legend class="sub_header">Контактные данные</legend>
+            <ul>
+                <li>
+                    <p>
+                        <label class="text" for="name">Имя</label>
+                        <br>
+                        <input name="name" id="name" placeholder="Иван">
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label class="text" for="surname"> Фамилия</label>
+                        <br>
+                        <input name="surname" id="surname" placeholder="Иванов">
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label class="text" for="phone">Номер телефона</label>
+                        <br>
+                        <input type="tel" name="phone" id="phone" value="+7" maxlength="12" required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label class="text" for="email">Адрес эл. почты</label>
+                        <br>
+                        <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label class="text" for="date">Дата отправки данных</font></label>
+                        <br>
+                        <input type="date" name="date" id="date">
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label class="text">Предпочитаемый способ взаимодействия</label>
+                        <br><input type="radio" id="ContactChoice1" name="contact" value="email" checked/>
+                        <label for="ContactChoice1">Электронная почта</label>
+                        <br><input type="radio" id="ContactChoice2" name="contact" value="phone"/>
+                        <label for="ContactChoice2">Телефон</label>
+                        <br><input type="radio" id="ContactChoice3" name="contact" value="messenger"/>
+                        <label for="ContactChoice3">Мессенджер</label>
+                        <br><input type="radio" id="ContactChoice4" name="contact" value="socials"/>
+                        <label for="ContactChoice4">Социальные сети</label>
+                </li>
+            </ul>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+
+    <form id="form2" action="https://www.bing.com/" target="_blank" method="get">
+        <button type="reset" class="btn btn-secondary">Очистить</button>
+        <fieldset>
+            <legend class="sub_header">Воспросы</legend>
+
+            <p>
+                <label>Нравятся ли вам фильмы Studio Ghibli?
+                    <br><input type="radio" id="yes" name="like" checked/>
+                    <label for="yes">Да</label>
+
+                    <br><input type="radio" id="no" name="like"/>
+                    <label for="no">Нет</label>
+                </label>
+            </p>
+
+            <p>
+                <label>Как много фильмов Studio Ghibli вы смотрели? &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="number" name="number_of_movies" min="0" value="0">
+                </label>
+            </p>
+
+            <p>
+                <label>Какие из перечисленных персонажей вам больше всего нравятся?
+                    <br><input type="checkbox" id="char1" name="characters" value="Totoro" checked>
+                    <label for="char1">Тоторо</label>
+                    <br><input type="checkbox" id="char2" name="characters" value="Chihiro">
+                    <label for="char2">Тихиро Огино</label>
+                    <br><input type="checkbox" id="char3" name="characters" value="NoFace">
+                    <label for="char3">Безликий</label>
+                    <br><input type="checkbox" id="char4" name="characters" value="Princess Mononoke">
+                    <label for="char4">Сан (Принцесса Мононоке)</label>
+                    <br><input type="checkbox" id="char5" name="characters" value="Howl">
+                    <label for="char5">Хаул</label>
+                </label>
+            </p>
+
+            <p>
+                <label>Фильмы какого режиссера вы предпочитаете? &nbsp;&nbsp;&nbsp;&nbsp;
+                    <select name="fav_producer" id="fav_producer">
+                        <option>Хаяо Миядзаки</option>
+                        <option>Хироюки Морита</option>
+                        <option>Хиромаса Ёнэбаяси</option>
+                        <option>Томоми Мотидзуки</option>
+                        <option>Михаэль Дюдок де Вит</option>
+                        <option>Исао Такахата</option>
+                        <option>Ёсифуми Кондо</option>
+                        <option>Горо Миядзаки</option>
+                    </select>
+                </label>
+            </p>
+
+            <p><label>Какой из представленных фильмов по вашему мнению является лучшим?
+                <br><input type="radio" id="film1" name="films" checked/>
+                <label for="film1">«Унесенные призраками»</label>
+
+                <br><input type="radio" id="film2" name="films"/>
+                <label for="film2">«Мой сосед Тоторо»</label>
+
+                <br><input type="radio" id="film3" name="films"/>
+                <label for="film3">«Небесный замок Лапута»</label>
+
+                <br><input type="radio" id="film4" name="films"/>
+                <label for="film4">«Ведьмина служба доставки»</label>
+
+                <br><input type="radio" id="film5" name="films"/>
+                <label for="film5">«Шепот сердца»</label>
+
+                <br><input type="radio" id="film6" name="films"/>
+                <label for="film6">«Принцесса Мононоке»</label>
+
+                <br><input type="radio" id="film7" name="films"/>
+                <label for="film7">«Ходячий замок»</label>
+
+                <br><input type="radio" id="film8" name="films"/>
+                <label for="film8">«Рыбка Поньо на утесе»</label>
+
+                <br><input type="radio" id="film9" name="films"/>
+                <label for="film9">«Со склонов Кокурико»</label>
+
+                <br><input type="radio" id="film10" name="films"/>
+                <label for="film10">«Ветер крепчает»</label>
+            </label>
+            </p>
+
+            <p>
+                <label for="fav_film">Какой ваш любимый фильм студии? &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="fav_film" id="fav_film">
+                </label>
+            </p>
+
+            <p>
+                <label>Почему именно он кажется вам наиболее привлекательным? &nbsp;&nbsp;&nbsp;&nbsp;
+                    <br><textarea placeholder=""></textarea>
+                </label>
+            </p>
+
+            <p>
+                <label for="worst_film">Есть ли фильм, от которого вы не в восторге? (никто не узнает;) &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="password" name="worst_film" id="worst_film">
+                </label>
+            </p>
+
+
+            <input type="hidden" name="country" value="РФ">
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Отправить</button>
+    </form>
+</section>
+
+<div>
+    {% include 'footer.html' with back_link="#back1" left_link='animeApp1:Task_01' right_link='animeApp1:Directors' %}
+</div>
+
+{% endblock %}
