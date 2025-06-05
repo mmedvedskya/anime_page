@@ -1,0 +1,85 @@
+{% load static %}
+<ul class="nav nav-pills card-header-pills">
+
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/welcome/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="index"  href="{% url 'animeApp1:Welcome' %}"
+        > Начальная страница </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/directors/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="lists"  href="{% url 'animeApp1:Directors' %}"
+        > Режиссеры и их фильмы </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/top5/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="characters"  href="{% url 'animeApp1:Top5' %}"
+        > Топ 5 персонажей </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/feedback/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="feedback"  href="{% url 'animeApp1:Feedback' %}"
+        > Результаты опроса </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/studio/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            target="_blank" id="wiki"  href="{% url 'animeApp1:Studio' %}"
+        > О студии </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/welcome/#quiz/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="survey"  href="{% url 'animeApp1:Welcome' %}#quiz"
+        > Анкета </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp2/education/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            id="my_edu"  href="{% url 'animeApp2:Edu' %}"
+        > Об ОП </a>
+    </li>
+    <li class="nav-item">
+        <a
+            {% if request.path == "/animeApp1/github/" %}
+                    class ='nav-link active'
+            {% else %}
+                    class ='nav-link'
+            {% endif %}
+            target="_blank" id="github"  href="https://github.com/mmedvedskya/anime_page"
+        > <img src="{% static 'pictures/github.png' %}" style="width: 2vw;"></a>
+    </li>
+    
+</ul>

@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Статистика по опросу</title>
+{% endblock %}
+
+{% block main %}
+<section class="sec1" >
+    <div class="header" id="back4">Отзывы</div>
+    <div class="card">
+        <form method="get">
+            <label>Фильтрация по симпатии к фильмам:
+                <select name="like">
+                    <option value="">Все</option>
+                    <option value="yes" {% if like_filter == "yes" %}selected{% endif %}>Да</option>
+                    <option value="no" {% if like_filter == "no" %}selected{% endif %}>Нет</option>
+                </select>
+            </label>
+            <span> | </span>
+            <label>Количество фильмов ≥ 
+                <input type="number" name="min_movies" value="{{ request.GET.min_movies|default:0 }}" min="0" style="width: 5em;">
+            </label>
+            <span> | </span>
+            <label>Поиск по email:
+                <input type="text" name="email" value="{{ email_search }}">
+            </label>
+            <span> | </span>
+            <button type="submit" class="btn btn-danger">Применить</button>
+            <a href="{% url 'animeApp1:Feedback' %}" class="btn btn-outline-secondary">Очистить</a>
+        </form>
+        
+        <p><b>Сортировка:</b></p>
+
+        <ul>
+            <li>
+                <a href="?like={{ like_filter }}&min_movies={{ request.GET.min_movies }}&email={{ email_search }}&sort=number_of_movies&dir=desc">
+                    По убыванию числа просмотренных фильмов
+                </a>
+            </li>
+            <li>
+                <a href="?like={{ like_filter }}&min_movies={{ request.GET.min_movies }}&email={{ email_search }}&sort=number_of_movies&dir=asc">
+                    По возрастанию числа просмотренных фильмов
+                </a>
+            </li>
+            <li>
+                <a href="?like={{ like_filter }}&min_movies={{ request.GET.min_movies }}&email={{ email_search }}&sort=date&dir=desc">
+                    Сначала новые
+                </a>
+            </li>
+            <li>
+                <a href="?like={{ like_filter }}&min_movies={{ request.GET.min_movies }}&email={{ email_search }}&sort=date&dir=asc">
+                    Сначала старые
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <table class="custom-table">
+        <thead>
+            <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Email</th>
+            <th>Телефон</th>
+            <th>Способ связи</th>
+            <!-- <th>Дата</th> -->
+            <th>Нравится Studio Ghibli?</th>
+            <th>Сколько фильмов смотрел</th>
+            <th>Любимый персонаж</th>
+            <th>Любимый режиссер</th>
+            <th>Лучший фильм</th>
+            <th>Комментарий к фильму</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fb in feedback_data %}
+                <tr>
+                <td>{{ fb.person.name }}</td>
+                <td>{{ fb.person.surname }}</td>
+                <td>{{ fb.person.email }}</td>
+                <td>{{ fb.person.phone }}</td>
+                <td>{{ fb.person.get_contact_display }}</td>
+                <!-- <td>{{ fb.person.date|date:"d.m.Y H:i" }}</td> -->
+                <td>{{ fb.get_like_display }}</td>
+                <td>{{ fb.number_of_movies }}</td>
+                <td>{{ fb.get_characters_display }}</td>
+                <td>{{ fb.fav_producer }}</td>
+                <td>{{ fb.get_films_display }}</td>
+                <td>{{ fb.fav_film }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="11">Пока нет ни одного ответа.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <br>
+</section>
+<br><br>
+<section class="sec2">
+    <div class="sub_header" style="text-align:left;">Агрегированные данные</div>
+    <ul>
+    <li>Всего отзывов: {{ feedback_stats.total }}</li>
+    <div><b>Статистика по числу просмотренных фильмов:</b></div>
+    <li>Среднее: {{ feedback_stats.avg_movies|floatformat:1 }}</li>
+    <li>Максимум: {{ feedback_stats.max_movies }}</li>
+    <li>Минимум: {{ feedback_stats.min_movies }}</li>
+    <li>Стандартное отклонение: {{ feedback_stats.stddev_movies|floatformat:1 }}</li>
+    <li>Суммарно просмотрено фильмов: {{ feedback_stats.total_movies }}</li>
+    </ul>
+</section>
+<br><br>
+
+<div>
+    {% include 'footer.html' with back_link="#back4" left_link='animeApp1:Top5' right_link='animeApp2:Edu' %}
+</div>
+{% endblock %}

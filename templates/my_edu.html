@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Об ОП</title>
+{% endblock %}
+
+{% block main %}
+<div class="card" style="width: 80vw;">
+    <h5 class="card text-center" id="back5">Моя образовательная программа</h5>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Название программы:</b> {{ program.name }}</li>
+        <li class="list-group-item"><b>Описание:</b> {{ program.description }}
+            <ul style="list-style:circle;">
+                {% for point in program.points.all %}
+                <li>{{ point.text }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="table-responsive card bg-light" style="width: 80vw;">
+    <h5 class="card text-center">Данные о людях с моей ОП</h5>
+    <div class="row g-2">
+        <form method="get" class="mb-4 row g-2">
+            <div class="col-md"><input type="text" name="surname" placeholder="Фамилия" value="{{ surname }}" class="form-control"></div>
+            <div class="col-md"><input type="text" name="name" placeholder="Имя" value="{{ name }}" class="form-control"></div>
+            <div class="col-md"><input type="text" name="patronymic" placeholder="Отчество" value="{{ patronymic }}" class="form-control"></div>
+            <div class="col-md"><input type="text" name="email" placeholder="Email содержит" value="{{ email }}" class="form-control"></div>
+            <div class="col-md"><input type="text" name="phone_ends" placeholder="Телефон заканчивается на" value="{{ phone_ends }}" class="form-control"></div>
+            <div class="col-md">
+                <label>Роль:
+                    <select name="group">
+                        <option value="">Все</option>
+                        <option value="office" {% if group == "office" %}selected{% endif %}>Учебный офис</option>
+                        <option value="me" {% if group == "me" %}selected{% endif %}>Я</option>
+                        <option value="students" {% if group == "students" %}selected{% endif %}>Одногруппники</option>
+                    </select>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-danger">Фильтровать</button>
+            <a href="{% url 'animeApp2:Edu' %}" class="btn btn-outline-secondary">Очистить</a>
+        </form>
+    </div>
+    <a href="?surname={{ surname }}&name={{ name }}&patronymic={{ patronymic }}&email={{ email }}&phone_ends={{ phone_ends }}&group={{ group }}&sort=surname&dir={% if sort_by == 'surname' and sort_dir == 'asc' %}desc{% else %}asc{% endif %}">
+        Сортировать фамилии по алфавиту {% if sort_by == 'surname' and sort_dir == 'asc' %}↑{% elif sort_by == 'surname' %}↓{% endif %}
+    </a>
+    <table class="table table-bordered table-hover text-center align-middle">
+    <thead class="table-light">
+        <tr>
+        <th>Фамилия</th>
+        <th>Имя</th>
+        <th>Отчество</th>
+        <th>Email</th>
+        <th>Телефон</th>
+        <th>Фото</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.surname }}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.patronymic }}</td>
+            <td>{{ person.email }}</td>
+            <td>{{ person.phone }}</td>
+            <td> <img class="rounded-circle" src="{{ person.image }}" alt="{{ person.name }} {{ person.patronymic }} {{ person.surname }}"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</div>
+</div>
+
+{% include 'footer.html' with back_link="#back5" left_link='animeApp1:Feedback' right_link='animeApp1:Welcome' %}
+{% endblock %}

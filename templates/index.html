@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Studio Ghibli</title>
+{% endblock %}
+
+{% block main %}
+<section class="sec1">
+    <div class="header" id="back1">Путеводитель по Studio Ghibli</div>
+    <div class="card" style="width: 30vw;">
+        <img src="{% static 'pictures/pic1.png' %}" class="card-img-top" alt="Characters from the movie" title="Spirited Away">
+        <div class="card-body">
+            <div class="card-text" style="font-size: 1.5vw;"><b>Studio Ghibli</b> — японская анимационная студия. Её основал в 1985 году режиссёр
+                и сценарист Хаяо Миядзаки вместе со своим коллегой и другом Исао Такахатой.
+            </div>
+        </div>
+    </div>
+    <br>
+</section>
+
+<br><br>
+
+<!--АНКЕТА-->
+<section class="sec2">
+    <div class="header" id="quiz">Анкета о фильмах Studio Ghibli</div>
+        <form method="post" action="{% url 'animeApp1:Feedback' %}" name="quiz">
+            {% csrf_token %}
+            <button type="reset" class="btn btn-secondary">Очистить</button>
+            <fieldset>
+                <legend class="sub_header">Контактные данные</legend>
+                {{ personal_form.as_p }}
+            </fieldset>
+            <fieldset>
+                <legend class="sub_header">Опрос</legend>
+                {{ feedback_form.as_p }}
+            </fieldset>
+            <button type="submit" class="btn btn-danger mx-auto d-block">Отправить</button>
+        </form>
+</section>
+<div>
+    {% include 'footer.html' with back_link="#back1" left_link='animeApp2:Edu' right_link='animeApp1:Directors' %}
+</div>
+
+{% endblock %}

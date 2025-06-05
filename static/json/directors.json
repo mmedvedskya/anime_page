@@ -1,0 +1,258 @@
+[
+  {
+    "model": "animeApp1.director",
+    "pk": 1,
+    "fields": {
+      "name": "Хироюки Морита"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 1,
+    "fields": {
+      "title": "«Возвращение кота» (19 июля 2002)",
+      "director": 1
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 2,
+    "fields": {
+      "name": "Хиромаса Ёнэбаяси"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 2,
+    "fields": {
+      "title": "«Ариэтти из страны лилипутов» (17 июля 2010)",
+      "director": 2
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 3,
+    "fields": {
+      "title": "«Воспоминания Марни» (19 июля 2014)",
+      "director": 2
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 3,
+    "fields": {
+      "name": "Хаяо Миядзаки"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 4,
+    "fields": {
+      "title": "«Навсикая из Долины ветров» (11 марта 1984)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 5,
+    "fields": {
+      "title": "«Небесный замок Лапута» (11 марта 1984)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 6,
+    "fields": {
+      "title": "«Мой сосед Тоторо» (16 апреля 1988)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 7,
+    "fields": {
+      "title": "«Ведьмина служба доставки» (29 июля 1989)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 8,
+    "fields": {
+      "title": "«Порко Россо» (18 июля 1992)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 9,
+    "fields": {
+      "title": "«Принцесса Мононоке» (12 июля 1997)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 10,
+    "fields": {
+      "title": "«Унесённые призраками» (27 июля 2001)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 11,
+    "fields": {
+      "title": "«Ходячий замок» (20 ноября 2004)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 12,
+    "fields": {
+      "title": "«Рыбка Поньо на утёсе» (19 июля 2008)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 13,
+    "fields": {
+      "title": "«Ветер крепчает» (20 июля 2013)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 14,
+    "fields": {
+      "title": "«Мальчик и птица» (14 июля 2023)",
+      "director": 3
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 4,
+    "fields": {
+      "name": "Томоми Мотидзуки"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 15,
+    "fields": {
+      "title": "«Здесь слышен океан» (3 мая 1993)",
+      "director": 4
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 5,
+    "fields": {
+      "name": "Михаэль Дюдок де Вит"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 16,
+    "fields": {
+      "title": "«Красная черепаха» (18 мая 2016)",
+      "director": 5
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 6,
+    "fields": {
+      "name": "Исао Такахата"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 17,
+    "fields": {
+      "title": "«Могила светлячков» (16 апреля 1988)",
+      "director": 6
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 18,
+    "fields": {
+      "title": "«Ещё вчера» (20 июля 1991)",
+      "director": 6
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 19,
+    "fields": {
+      "title": "«Помпоко: Война тануки» (16 июля 1994)",
+      "director": 6
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 20,
+    "fields": {
+      "title": "«Мои соседи Ямада» (17 июля 1999)",
+      "director": 6
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 21,
+    "fields": {
+      "title": "«Сказание о принцессе Кагуя» (23 ноября 2013)",
+      "director": 6
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 7,
+    "fields": {
+      "name": "Ёсифуми Кондо"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 22,
+    "fields": {
+      "title": "«Шёпот сердца» (15 июля 1995)",
+      "director": 7
+    }
+  },
+  {
+    "model": "animeApp1.director",
+    "pk": 8,
+    "fields": {
+      "name": "Горо Миядзаки"
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 23,
+    "fields": {
+      "title": "«Сказания Земноморья» (29 июля 2006)",
+      "director": 8
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 24,
+    "fields": {
+      "title": "«Со склонов Кокурико» (16 июля 2011)",
+      "director": 8
+    }
+  },
+  {
+    "model": "animeApp1.movie",
+    "pk": 25,
+    "fields": {
+      "title": "«Ая и ведьма» (30 декабря 2020)",
+      "director": 8
+    }
+  }
+]

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  <title>Все фильмы</title>
+{% endblock %}
+
+{% block main %}
+<p class="header" id="back2">Полнометражные фильмы Studio Ghibli</p>
+<p class="sub_header">Режиссеры и их фильмы по дате премьеры</p>
+
+<container class="flex">
+    {% for director in directors%}
+        <div class="card bg-light mb-3">
+            <div class="card-header">{{director.name}}</div>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-text">
+                        <ol>
+                            {% for movie in director.movies.all %}
+                            <li>{{movie.title}}</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</container>
+<div>
+    {% include 'footer.html' with back_link="#back2" left_link='animeApp1:Welcome' right_link='animeApp1:Top5' %}
+</div>
+
+{% endblock %}

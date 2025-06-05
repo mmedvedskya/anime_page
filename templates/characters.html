@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% load static %} 
+
+{% block title %}
+<title>Персонажи</title>
+{% endblock %} 
+
+{% block main %}
+<div class="header" id="back3">Лучшие персонажи студии Ghibli</div>
+<div class="sub_header">Топ 5 персонажей</div>
+<p class="text" style="text-align: center; font-family: Verdana">
+  Студия Ghibli известна своими запоминающимися персонажами и завораживающими
+  историями. <br/> Здесь представлены 5 наиболее популярных и ярких персонажей студии.
+</p>
+<div>{% include 'carousel.html' with characters=characters %}</div>
+
+<div
+  class="sub_header"
+  style="
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 10em;
+    border-width: 0.01em;
+    border-style: solid;
+    border-color: black;
+  "
+>
+  Топ 5 персонажей:
+  <ol style="font-size: 0.9em; text-align: left; margin-left: 10%">
+    {% for character in characters %}
+    <li>
+      <a href="{{ character.link }}" target="_blank">{{ character.name }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+
+{% include 'footer.html' with back_link="#back3" left_link='animeApp1:Directors' right_link='animeApp1:Feedback' %}
+
+{% endblock %}

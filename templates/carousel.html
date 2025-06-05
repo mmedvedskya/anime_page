@@ -1,0 +1,33 @@
+{% load static %}
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        {% for character in characters %}
+            <li data-bs-target="#carousel" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}"></li>
+        {% endfor %}
+    </ol>
+
+    <div class="carousel-inner">
+        {% for character in characters %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                {% if forloop.counter < 5 %}
+                    <img class="d-block w-100" src="{% static character.image %}" title="{{ character.name }}" alt="{{ character.name }}">
+                {% else %}
+                    <img class="d-block w-100" src="{{ character.image }}" title="{{ character.name }}" alt="Slide {{ character.name }}">
+                {% endif %}
+                <div class="carousel-caption d-none d-md-block">
+                    <p class="header">{{ character.name }}</p>
+                    <p class="text">{{ character.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a class="carousel-control-prev" role="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" role="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </a>
+</div>

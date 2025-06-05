@@ -1,0 +1,189 @@
+[
+  {
+    "model": "animeApp2.people",
+    "pk": 1,
+    "fields": {
+      "name": "Иван",
+      "patronymic": "Иванович",
+      "surname": "Иванов",
+      "image": "https://image.lexica.art/full_webp/014eaf47-ccb0-4290-b2a6-3a57d7532516",
+      "email": "ivan@gmail.com",
+      "phone": "+7 012 345 6789"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 2,
+    "fields": {
+      "name": "Александра",
+      "patronymic": "Александровна",
+      "surname": "Александрова",
+      "image": "https://image.lexica.art/full_webp/0af3818f-5742-46ad-b98f-1832ae89e38e", 
+      "email": "alex@mail.ru",
+      "phone": "+7 987 654 3210"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 3,
+    "fields": {
+      "name": "Василий",
+      "patronymic": "Высильевич",
+      "surname": "Васильев",
+      "image": "https://image.lexica.art/full_webp/06850530-bbd1-4869-913f-de77d29279bc",
+      "email": "vasy@mail.ru",
+      "phone": "+7 444 333 2211"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 4,
+    "fields": {
+      "name": "Петр",
+      "patronymic": "Петрович",
+      "surname": "Петров",
+      "image": "https://image.lexica.art/full_webp/d8c3d944-9bcb-4a2d-9020-42a5f721ede5",
+      "email": "petr@mail.ru",
+      "phone": "+7 111 222 3334"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 5,
+    "fields": {
+      "name": "Иван",
+      "patronymic": "Андреевич",
+      "surname": "Коршунов",
+      "image": "https://image.lexica.art/full_webp/cab347b7-b964-449b-99dd-3e96b01f320a",
+      "email": "corsh@yandex.ru",
+      "phone": "+7 444 333 2211"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 6,
+    "fields": {
+      "name": "Иван",
+      "patronymic": "Петрович",
+      "surname": "Васильев",
+      "image": "https://image.lexica.art/full_webp/6305342c-4431-4620-8370-d5fcc2648674", 
+      "email": "ipvasiliev@gmail.com",
+      "phone": "+7 111 222 3334"
+    }
+  },
+  {
+  "model": "animeApp2.people",
+  "pk": 7,
+  "fields": {
+    "name": "Климент",
+    "patronymic": "Александрович",
+    "surname": "Горчаков",
+    "image": "https://www.hse.ru/pubs/share/thumb/867206034:c2310x2310+0+217:r380x380!.jpg",
+    "email": "kagorchakov@hse.ru",
+    "phone": "+7 998 877 6655"
+  }
+},
+{
+  "model": "animeApp2.people",
+  "pk": 8,
+  "fields": {
+    "name": "Анастасия",
+    "patronymic": "Владимировна",
+    "surname": "Коваленко",
+    "image": "https://www.hse.ru/pubs/share/thumb/894140700:c720x720+0+0:r380x380!",
+    "email": "a.kovalenko@hse.ru",
+    "phone": "+7 556 677 8899"
+  }
+},
+
+{
+  "model": "animeApp2.program",
+  "pk": 1,
+  "fields": {
+    "name": "Маркетинг и рыночная аналитика",
+    "description": "Особое место в программе занимает формирование у студентов навыков практической аналитической работы в области разработки и принятия маркетинговых решений. Практическая ориентация программы достигается за счет:",
+    "supervisor": 7,
+    "manager": 8
+  }
+},
+{
+  "model": "animeApp2.programpoints",
+  "pk": 1,
+  "fields": {
+    "program": 1,
+    "text": "участия в реализации программы представителей компаний-лидеров сектора маркетинговых исследований"
+  }
+},
+{
+  "model": "animeApp2.programpoints",
+  "pk": 2,
+  "fields": {
+    "program": 1,
+    "text": "привлечения маркетологов-практиков из ведущих компаний для чтения лекций"
+  }
+},
+{
+  "model": "animeApp2.programpoints",
+  "pk": 3,
+  "fields": {
+    "program": 1,
+    "text": "применения кейс-метода с разбором конкретных ситуаций из опыта фирм"
+  }
+},
+{
+  "model": "animeApp2.programpoints",
+  "pk": 4,
+  "fields": {
+    "program": 1,
+    "text": "подготовки студентами курсовых работ в форме маркетингового исследования"
+  }
+},
+{
+  "model": "animeApp2.people",
+  "pk": 9,
+  "fields": {
+    "name": "Мария",
+    "patronymic": "Олеговна",
+    "surname": "Медведская",
+    "image": "https://image.lexica.art/full_webp/b4e8dae9-6be8-4c21-a52f-79ff0240dfe6",
+    "email": "momedvedskaya@edu.hse.ru",
+    "phone": "+7 996 644 4220"
+  }
+},
+{
+    "model": "animeApp2.people",
+    "pk": 10,
+    "fields": {
+      "name": "Василиса",
+      "patronymic": "Владимировна",
+      "surname": "Печкина",
+      "image": "https://image.lexica.art/full_webp/3c219bd8-d36e-4ba5-b409-3f240f34027d", 
+      "email": "pech@gmail.com",
+      "phone": "+7 113 223 3333"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 11,
+    "fields": {
+      "name": "Ольга",
+      "patronymic": "Федоровна",
+      "surname": "Артемьева",
+      "image": "https://image.lexica.art/full_webp/96ce3555-191d-497b-8ac5-89b31bf8fbb6", 
+      "email": "oly@mail.ru",
+      "phone": "+7 110 220 3040"
+    }
+  },
+  {
+    "model": "animeApp2.people",
+    "pk": 12,
+    "fields": {
+      "name": "Евгения",
+      "patronymic": "Антоновна",
+      "surname": "Шельц",
+      "image": "https://image.lexica.art/full_webp/6d198342-843e-43f3-bc66-998c7bb5eaac", 
+      "email": "eashelc@yandex.ru",
+      "phone": "+7 111 222 3334"
+    }
+  }
+]

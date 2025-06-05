@@ -1,0 +1,134 @@
+[
+  {
+    "model": "animeApp1.product",
+    "pk": 1,
+    "fields": {
+      "title": "Копилка",
+      "vendor_code": "111",
+      "description": "Двигающаяся копилка в форме Безликого (Каонаси) из фильма «Унесенные призраками»",
+      "price": 200,
+      "img": "https://blog.fromjapan.co.jp/en/wp-content/uploads/2020/03/StudioGhibli_Kaonashi.png"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 2,
+    "fields": {
+      "title": "Фигурка",
+      "vendor_code": "222",
+      "description": "Полноценная фигурка Навсикая и планер из фильма «Навсикая из Долины Ветров»",
+      "price": 250,
+      "img": "https://blog.fromjapan.co.jp/en/wp-content/uploads/2020/03/Ghibli_Nausicaa.png"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 3,
+    "fields": {
+      "title": "Кухонные принадлежности",
+      "vendor_code": "333",
+      "description": "Сковорода и лопатка с Кальцифером из фильма «Ходячий замок»",
+      "price": 450,
+      "img": "https://blog.fromjapan.co.jp/en/wp-content/uploads/2020/03/Ghibli_FryingPanSpatula.png"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 4,
+    "fields": {
+      "title": "Плюшевая игрушка",
+      "vendor_code": "444e",
+      "description": "Кот ведьмы Кики - кот Джи-джи плюшевый 10-15см",
+      "price": 300,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/04/productimage303754925_2nd.jpg?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 5,
+    "fields": {
+      "title": "Носки",
+      "vendor_code": "4445e",
+      "description": "Комплект носков Studio Ghibli 4 пары",
+      "price": 400,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/04/PEONFLYNewStripedcartoonfairytaleAnimationTotorosoxAutumnSummerSouthKoreanwomensFashion_2nd.jpg?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 6,
+    "fields": {
+      "title": "Повязка",
+      "vendor_code": "4446e",
+      "description": "Махровая повязка на голову из фильма «Ведьмина служба доставки»",
+      "price": 200,
+      "img": "https://blog.fromjapan.co.jp/en/wp-content/uploads/2020/03/Ghibli_HairBand.png"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 7,
+    "fields": {
+      "title": "Толстовка",
+      "vendor_code": "4447e",
+      "description": "Толстовка унисекс с подборкой персонажей Studio Ghibli",
+      "price": 700,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/11/redirect11272020131124-1.jpg?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 8,
+    "fields": {
+      "title": "Декор для сада",
+      "vendor_code": "4448e",
+      "description": "Статуэтки для сада с главной героиней фильма «Рыбка Поньо на утесе»",
+      "price": 400,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2019/09/HTB1TVhCSpXXXXc2aFXXq6xXFXXXP-removebg-preview.png?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 9,
+    "fields": {
+      "title": "Брелок",
+      "vendor_code": "4449e",
+      "description": "Брелок духов дерева из фильма «Принцесса Мононоке»",
+      "price": 165,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2017/05/HTB11KrJOhjaK1RjSZFAq6zdLFXaF.png?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 10,
+    "fields": {
+      "title": "Фигурка",
+      "vendor_code": "44410e",
+      "description": "Фигурка духов дерева из фильма «Принцесса Мононоке»",
+      "price": 235,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/11/HTB1u6ZocQGj11JjSZFMq6xnRVXaK.jpg?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 11,
+    "fields": {
+      "title": "Сумка",
+      "vendor_code": "44411e",
+      "description": "Миниатюрная сумка через плечо с Безликим из фильма «Унесенные призраками»",
+      "price": 300,
+      "img": "https://enez76gwp29.exactdn.com/wp-content/uploads/2020/05/H77049cf4c568481a8149a07b858568d2W-removebg-preview.png?strip=all&lossy=1&ssl=1"
+    }
+  },
+  {
+    "model": "animeApp1.product",
+    "pk": 12,
+    "fields": {
+      "title": "Солонка",
+      "vendor_code": "44412e",
+      "description": "Солонка с перцем «Мой сосед Тоторо»",
+      "price": 300,
+      "img": "https://blog.fromjapan.co.jp/en/wp-content/uploads/2020/03/StudioGhibli_Totoro.png"
+    }
+  }
+]
